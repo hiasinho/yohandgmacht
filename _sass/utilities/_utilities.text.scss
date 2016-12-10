@@ -1,0 +1,22 @@
+.u-text {
+
+  &--normal {
+    font-weight: 400 !important;
+  }
+
+  &--light {
+    font-weight: 300 !important;
+  }
+
+  &--lighter {
+    font-weight: 100 !important;
+  }
+
+  &--center {
+    text-align: center !important;
+  }
+
+  &--right {
+    text-align: right !important;
+  }
+}

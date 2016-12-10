@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    #THEMES
+\*------------------------------------*/
+
+$color-theme-highlight-background: white;
+$color-theme-tint-background: #f2f2f2;
+$color-theme-dark-background: $color-gray;
+$color-theme-dark: white;
+$color-theme-darker-background: $color-gray--dark;
+$color-theme-darker: white;
+$color-theme-attention-background: $color-red;
+$color-theme-attention: white;
+
+
+.u-theme--highlight {
+    background-color: $color-theme-highlight-background;
+}
+
+.u-theme--tint {
+    background-color: $color-theme-tint-background;
+}
+
+.u-theme--dark {
+    background-color: $color-theme-dark-background;
+    color: $color-theme-dark;
+
+    a {
+      color: $color-theme-dark;
+      @include attention() {
+        // text-decoration: underline;
+      }
+    }
+}
+
+.u-theme--darker {
+    background-color: $color-theme-darker-background;
+    color: $color-theme-darker;
+
+    a {
+      color: $color-theme-darker;
+      @include attention() {
+        // text-decoration: underline;
+      }
+    }
+}
+
+.u-theme-attention {
+    background-color: $color-theme-attention-background;
+    color: $color-theme-attention;
+
+    a {
+      color: $color-theme-attention;
+      @include attention() {
+        // text-decoration: underline;
+      }
+    }
+}

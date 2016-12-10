@@ -1,0 +1,40 @@
+//  Inspired by http://csswizardry.com/2011/10/the-island-object/
+.o-island {
+  padding: $inuit-global-spacing-unit;
+
+  &-tiny {
+    padding: $inuit-global-spacing-unit-tiny;
+  }
+
+  &-small {
+    padding: $inuit-global-spacing-unit-small;
+  }
+
+  &-large {
+    padding: $inuit-global-spacing-unit-large;
+  }
+
+  &-huge {
+    padding: $inuit-global-spacing-unit-huge;
+  }
+}
+
+.o-peninsula {
+  padding: $inuit-global-spacing-unit 0;
+
+  &-tiny {
+    padding: $inuit-global-spacing-unit-tiny 0;
+  }
+
+  &-small {
+    padding: $inuit-global-spacing-unit-small 0;
+  }
+
+  &-large {
+    padding: $inuit-global-spacing-unit-large 0;
+  }
+
+  &-huge {
+    padding: $inuit-global-spacing-unit-huge 0;
+  }
+}

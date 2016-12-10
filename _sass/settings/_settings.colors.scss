@@ -1,0 +1,32 @@
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+$color-gray: #575757;
+$color-gray--dark: #333;
+$color-gray--medium: #B2B2B2;
+$color-gray--light: #f2f2f2;
+
+$color-blue: #53aee0;
+$color-orange: #f47a33;
+$color-red: lighten(#D41317, 10%);
+
+$primary-color: $color-red;
+$secondary-color: #EBC793;
+
+$color-success: #00D58D;
+$color-clean: white;
+
+// Font Colors
+$global-font-color: $dark-gray;
+$color-action: $primary-color;
+
+// Border
+$color-base-border: $dark-gray;
+
+// Background Colors
+$color-base-background: white;
+$secondary-background-color: $color-gray--light;
+
+// $main-gradient: linear-gradient(150deg, #4893BC 0%, #51BFBE 50%, #EBC793 100%);

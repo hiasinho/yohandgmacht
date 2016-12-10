@@ -1,0 +1,60 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+// Typography
+$global-font-family: 'Exo 2';
+
+// Gradients
+$main-gradient: linear-gradient(150deg, $primary-color 0%, #51BFBE 50%, $secondary-color 100%);
+
+// Standardise some UI treatments.
+$global-radius: 0px !default;
+$global-transition: (1/3) + s !default;
+
+$base-border: 1px solid $color-gray--dark;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($color-action, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+$inuit-global-spacing-unit-factor-sohuge: 5;
+$inuit-global-spacing-unit-sohuge:  round($inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-sohuge);
+
+$inuit-spacing-sizes: (
+  null: $inuit-global-spacing-unit,
+  '-tiny': $inuit-global-spacing-unit-tiny,
+  '-small': $inuit-global-spacing-unit-small,
+  '-large': $inuit-global-spacing-unit-large,
+  '-huge': $inuit-global-spacing-unit-huge,
+  '-sohuge': $inuit-global-spacing-unit-sohuge,
+  '-none': 0
+);
+
+$text-inputs-list: 'input[type="color"]',
+                   'input[type="date"]',
+                   'input[type="datetime"]',
+                   'input[type="datetime-local"]',
+                   'input[type="email"]',
+                   'input[type="month"]',
+                   'input[type="number"]',
+                   'input[type="password"]',
+                   'input[type="search"]',
+                   'input[type="tel"]',
+                   'input[type="text"]',
+                   'input[type="time"]',
+                   'input[type="url"]',
+                   'input[type="week"]',
+                   'input:not([type])',
+                   'textarea';
+
+$all-text-inputs:        assign-inputs($text-inputs-list);
+$all-text-inputs-active: assign-inputs($text-inputs-list, active);
+$all-text-inputs-focus:  assign-inputs($text-inputs-list, focus);
+$all-text-inputs-hover:  assign-inputs($text-inputs-list, hover);
