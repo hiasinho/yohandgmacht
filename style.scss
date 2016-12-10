@@ -75,8 +75,10 @@
 
 $inuit-offsets: true;
 @import "utilities/utilities.widths";
+@import "utilities/utilities.heights";
 @import "utilities/utilities.headings";
 @import "utilities/utilities.spacing";
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
+@import "utilities/utilities.align";
 @import "utilities/utilities.themes";
