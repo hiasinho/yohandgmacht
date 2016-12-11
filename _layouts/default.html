@@ -14,21 +14,29 @@
   </head>
 
   <body>
-    <div class="o-layout">
-      <div class="o-layout__item u-1/2@tablet u-theme-highlight u-100vh">
-        <div class="o-island">
-          <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-          <p class="site-description">{{ site.description }}</p>
+    <div class="o-wrapper u-align-center u-margin-top-large u-margin-bottom-large">
+      <img src="{{ site.avatar }}" class="u-margin-bottom" />
 
-          {{ content }}
-        </div>
-      </div>
+      <h1 class="site-name">{{ site.title }}</h1>
+    </div>
 
-      <div class="o-layout__item u-1/2@tablet u-theme-attention u-100vh">
-        <div class="o-island u-align-vertical-center">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-        </div>
-      </div>
+    <ul class="c-navigation">
+      <li class="c-navigation__item">
+        <a href="#massarbeit" class="c-navigation__link">Maßarbeit</a>
+      </li>
+      <li class="c-navigation__item">
+        <a href="#aenderungen" class="c-navigation__link">Änderungen</a>
+      </li>
+      <li class="c-navigation__item">
+        <a href="#kindersachen" class="c-navigation__link">Kindersachen</a>
+      </li>
+      <li class="c-navigation__item">
+        <a href="#uebermich" class="c-navigation__link">Über mich</a>
+      </li>
+    </ul>
+
+    <div class="o-wrapper">
+      {{ content }}
     </div>
 
     {% include analytics.html %}

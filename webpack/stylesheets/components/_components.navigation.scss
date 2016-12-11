@@ -1,0 +1,44 @@
+.c-navigation {
+  margin-left: 0;
+  list-style: none;
+
+  @include mq($from: tablet) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+  }
+
+  &__item {
+    display: block;
+
+    text-align: center;
+
+    @include mq($from: tablet) {
+      display: inline-block;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $color-beige;
+    background-color: $color-red;
+    padding: $spacing-unit--small $spacing-unit--small;
+
+    &:hover {
+      background-color: darken($color-red, 10%);
+    }
+
+    @include mq($from: tablet) {
+      display: inline-block;
+      color: $color-gray--dark;
+      background-color: transparent;
+
+      &:hover {
+        color: $color-beige;
+        background-color: $color-red;
+      }
+    }
+  }
+}

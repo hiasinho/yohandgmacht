@@ -4,8 +4,11 @@
 // The global settings file contains any project-wide variables; things that
 // need to be made available to the entire codebase.
 
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Lato:300,400,700');
+
 // Typography
-$global-font-family: 'Exo 2';
+$global-font-family: 'Lato';
+$global-heading-font-family: 'Architects Daughter';
 
 // Gradients
 $main-gradient: linear-gradient(150deg, $primary-color 0%, #51BFBE 50%, $secondary-color 100%);

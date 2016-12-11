@@ -38,6 +38,10 @@ const config = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!')),
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader'
       }
     ],
   },

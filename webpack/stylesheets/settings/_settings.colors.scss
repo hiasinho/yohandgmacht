@@ -8,8 +8,9 @@ $color-gray--dark: #333;
 $color-gray--medium: #B2B2B2;
 $color-gray--light: #f2f2f2;
 
+$color-beige: #FDFDF1;
 $color-blue: #53aee0;
-$color-orange: #f47a33;
+$color-orange: #FFAC81;
 $color-red: #ED6A5A;
 
 $primary-color: $color-red;
@@ -26,7 +27,7 @@ $color-action: $primary-color;
 $color-base-border: $dark-gray;
 
 // Background Colors
-$color-base-background: white;
+$color-base-background: $color-beige;
 $secondary-background-color: $color-gray--light;
 
 // $main-gradient: linear-gradient(150deg, #4893BC 0%, #51BFBE 50%, #EBC793 100%);

@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter|Lato:300,400,700);@charset "UTF-8";
 /* ==========================================================================
    #BOX-SIZING
    ========================================================================== */
@@ -507,6 +507,9 @@ html {
   min-height: 100%;
   /* [3] */ }
 
+body {
+  background-color: #FDFDF1; }
+
 /* ==========================================================================
    #HEADINGS
    ========================================================================== */
@@ -581,6 +584,43 @@ img[height] {
 table {
   width: 100%;
   /* [1] */ }
+
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+/**
+ * Simple page-level setup.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ */
+html {
+  font-family: "Lato";
+  /* [1] */
+  font-weight: 300; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Architects Daughter"; }
+
+a {
+  color: #ED6A5A;
+  text-decoration: none;
+  transition: color 0.33333s; }
+  a:active, a:focus, a:hover {
+    color: shade(#ED6A5A, 25%); }
+
+dd {
+  margin-left: 0;
+  margin-bottom: 12px; }
 
 /* ==========================================================================
    #WRAPPER
@@ -785,207 +825,6 @@ table {
     text-align: left; }
 
 /* ==========================================================================
-   #MEDIA
-   ========================================================================== */
-/**
- * Place any image- and text-like content side-by-side, as per:
- * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- */
-.o-media {
-  display: block; }
-  .o-media:after {
-    content: "" !important;
-    display: block !important;
-    clear: both !important; }
-
-.o-media__img {
-  float: left;
-  margin-right: 24px; }
-  .o-media__img > img {
-    display: block; }
-
-.o-media__body {
-  overflow: hidden;
-  display: block; }
-  .o-media__body,
-  .o-media__body > :last-child {
-    margin-bottom: 0; }
-
-/* Size variants
-   ========================================================================== */
-/**
- * Modify the amount of space between our image and our text. We also have
- * reversible options for all available sizes.
- */
-.o-media--tiny > .o-media__img {
-  margin-right: 6px; }
-
-.o-media--tiny.o-media--reverse > .o-media__img {
-  margin-right: 0;
-  margin-left: 6px; }
-
-.o-media--small > .o-media__img {
-  margin-right: 12px; }
-
-.o-media--small.o-media--reverse > .o-media__img {
-  margin-right: 0;
-  margin-left: 12px; }
-
-.o-media--large > .o-media__img {
-  margin-right: 48px; }
-
-.o-media--large.o-media--reverse > .o-media__img {
-  margin-right: 0;
-  margin-left: 48px; }
-
-.o-media--huge > .o-media__img {
-  margin-right: 96px; }
-
-.o-media--huge.o-media--reverse > .o-media__img {
-  margin-right: 0;
-  margin-left: 96px; }
-
-/* Reversed media objects
-   ========================================================================== */
-.o-media--reverse > .o-media__img {
-  float: right;
-  margin-right: 0;
-  margin-left: 24px; }
-
-/* Gutterless media objects
-   ========================================================================== */
-.o-media--flush > .o-media__img {
-  margin-right: 0;
-  margin-left: 0; }
-
-/* ==========================================================================
-   #FLAG
-   ========================================================================== */
-/**
- * The flag object is a design pattern similar to the media object, however it
- * utilises `display: table[-cell];` to give us control over the vertical
- * alignments of the text and image.
- *
- * http://csswizardry.com/2013/05/the-flag-object/
- *
- * 1. Allows us to control vertical alignments.
- * 2. Force the object to be the full width of its parent. Combined with [1],
- *    this makes the object behave in a quasi-`display: block;` manner.
- */
-.o-flag {
-  display: table;
-  /* [1] */
-  width: 100%;
-  /* [2] */ }
-
-/**
-   * Items within a flag object. There should only ever be one of each.
-   *
-   * 1. Default to aligning content to their middles.
-   */
-.o-flag__img,
-.o-flag__body {
-  display: table-cell;
-  vertical-align: middle;
-  /* [1] */ }
-
-/**
-   * Flag images have a space between them and the body of the object.
-   *
-   * 1. Force `.flag__img` to take up as little space as possible:
-   *    https://pixelsvsbytes.com/2012/02/this-css-layout-grid-is-no-holy-grail/
-   */
-.o-flag__img {
-  width: 1px;
-  /* [1] */
-  padding-right: 24px;
-  /**
-     * 1. Fixes problem with images disappearing.
-     */ }
-  .o-flag__img > img {
-    max-width: none;
-    /* [1] */ }
-
-/**
-   * The container for the main content of the flag object.
-   *
-   * 1. Forces the `.flag__body` to take up all remaining space.
-   */
-.o-flag__body {
-  width: auto;
-  /* [1] */ }
-  .o-flag__body,
-  .o-flag__body > :last-child {
-    margin-bottom: 0; }
-
-/* Size variants.
-   ========================================================================== */
-.o-flag--tiny > .o-flag__img {
-  padding-right: 6px; }
-
-.o-flag--tiny.o-flag--reverse > .o-flag__img {
-  padding-right: 0;
-  padding-left: 6px; }
-
-.o-flag--small > .o-flag__img {
-  padding-right: 12px; }
-
-.o-flag--small.o-flag--reverse > .o-flag__img {
-  padding-right: 0;
-  padding-left: 12px; }
-
-.o-flag--large > .o-flag__img {
-  padding-right: 48px; }
-
-.o-flag--large.o-flag--reverse > .o-flag__img {
-  padding-right: 0;
-  padding-left: 48px; }
-
-.o-flag--huge > .o-flag__img {
-  padding-right: 96px; }
-
-.o-flag--huge.o-flag--reverse > .o-flag__img {
-  padding-right: 0;
-  padding-left: 96px; }
-
-.o-flag--flush > .o-flag__img {
-  padding-right: 0;
-  padding-left: 0; }
-
-/* Reversed flag.
-   ========================================================================== */
-/**
- * 1. Swap the rendered direction of the object…
- * 2. …and reset it.
- * 3. Reassign margins to the correct sides.
- */
-.o-flag--reverse {
-  direction: rtl;
-  /* [1] */ }
-  .o-flag--reverse > .o-flag__img,
-  .o-flag--reverse > .o-flag__body {
-    direction: ltr;
-    /* [2] */ }
-  .o-flag--reverse > .o-flag__img {
-    padding-right: 0;
-    /* [3] */
-    padding-left: 24px;
-    /* [3] */ }
-
-/* Alignment variants.
-   ========================================================================== */
-/**
- * Vertically align the image- and body-content differently. Defaults to middle.
- */
-.o-flag--top > .o-flag__img,
-.o-flag--top > .o-flag__body {
-  vertical-align: top; }
-
-.o-flag--bottom > .o-flag__img,
-.o-flag--bottom > .o-flag__body {
-  vertical-align: bottom; }
-
-/* ==========================================================================
    #LIST-BARE
    ========================================================================== */
 /**
@@ -1009,300 +848,6 @@ table {
 .o-list-inline__item {
   display: inline-block; }
 
-/* ==========================================================================
-   #BOX
-   ========================================================================== */
-/**
- * The box object simply boxes off content. Extend with cosmetic styles in the
- * Components layer.
- *
- * 1. So we can apply the `.o-box` class to naturally-inline elements.
- */
-.o-box {
-  display: block;
-  /* [1] */
-  padding: 24px; }
-  .o-box:after {
-    content: "" !important;
-    display: block !important;
-    clear: both !important; }
-  .o-box > :last-child {
-    margin-bottom: 0; }
-
-/* Size variants
-   ========================================================================== */
-.o-box--flush {
-  padding: 0; }
-
-.o-box--tiny {
-  padding: 6px; }
-
-.o-box--small {
-  padding: 12px; }
-
-.o-box--large {
-  padding: 48px; }
-
-.o-box--huge {
-  padding: 96px; }
-
-/* ==========================================================================
-   #BLOCK
-   ========================================================================== */
-/**
- * Stacked image-with-text object. A simple abstraction to cover a very commonly
- * occurring design pattern.
- */
-.o-block {
-  display: block;
-  text-align: center; }
-
-.o-block__img {
-  margin-bottom: 24px;
-  /* Size variants.
-       ====================================================================== */ }
-  .o-block--flush > .o-block__img {
-    margin-bottom: 0; }
-  .o-block--tiny > .o-block__img {
-    margin-bottom: 6px; }
-  .o-block--small > .o-block__img {
-    margin-bottom: 12px; }
-  .o-block--large > .o-block__img {
-    margin-bottom: 48px; }
-  .o-block--huge > .o-block__img {
-    margin-bottom: 96px; }
-
-.o-block__body {
-  display: block; }
-
-/* Alignment variants.
-   ========================================================================== */
-.o-block--right {
-  text-align: right; }
-
-.o-block--left {
-  text-align: left; }
-
-/* ==========================================================================
-   #RATIO
-   ========================================================================== */
-/**
- * Create ratio-bound content blocks, to keep media (e.g. images, videos) in
- * their correct aspect ratios.
- *
- * http://alistapart.com/article/creating-intrinsic-ratios-for-video
- *
- * 1. Default cropping is a 1:1 ratio (i.e. a perfect square).
- */
-.o-ratio {
-  position: relative;
-  display: block;
-  overflow: hidden; }
-  .o-ratio:before {
-    content: "";
-    display: block;
-    width: 100%;
-    padding-bottom: 100%;
-    /* [1] */ }
-
-.o-ratio__content,
-.o-ratio > iframe,
-.o-ratio > embed,
-.o-ratio > object {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%; }
-
-/* stylelint-disable */
-/* Ratio variants.
-   ========================================================================== */
-/**
- * Generate a series of ratio classes to be used like so:
- *
- *   <div class="o-ratio  o-ratio--16:9">
- *
- */
-.o-ratio--2\:1:before {
-  padding-bottom: 50%; }
-
-.o-ratio--4\:3:before {
-  padding-bottom: 75%; }
-
-.o-ratio--16\:9:before {
-  padding-bottom: 56.25%; }
-
-/* stylelint-enable */
-/* ==========================================================================
-   #CROP
-   ========================================================================== */
-/**
- * Provide a cropping container in order to display media (usually images)
- * cropped to certain ratios.
- *
- * 1. Set up a positioning context in which the image can sit.
- * 2. This is the crucial part: where the cropping happens.
- */
-.o-crop {
-  position: relative;
-  /* [1] */
-  display: block;
-  overflow: hidden;
-  /* [2] */ }
-
-/**
-   * Apply this class to the content (usually `img`) that needs cropping.
-   *
-   * 1. Image’s default positioning is top-left in the cropping box.
-   * 2. Make sure the media doesn’t stop itself too soon.
-   */
-.o-crop__content {
-  position: absolute;
-  top: 0;
-  /* [1] */
-  left: 0;
-  /* [1] */
-  max-width: none;
-  /* [2] */ }
-
-/**
-   * We can position the media in different locations within the cropping area.
-   */
-.o-crop__content--right {
-  right: 0;
-  left: auto; }
-
-.o-crop__content--bottom {
-  top: auto;
-  bottom: 0; }
-
-.o-crop__content--center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-/* stylelint-disable */
-/* Crop-ratio variants.
-   ========================================================================== */
-/**
- * Generate a series of crop classes to be used like so:
- *
- *   <div class="o-crop  o-crop--16:9">
- *
- */
-.o-crop--2\:1 {
-  padding-bottom: 50%; }
-
-.o-crop--4\:3 {
-  padding-bottom: 75%; }
-
-.o-crop--16\:9 {
-  padding-bottom: 56.25%; }
-
-/* stylelint-enable */
-/* ==========================================================================
-   #TABLE
-   ========================================================================== */
-/**
- * A simple object for manipulating the structure of HTML `table`s.
- */
-.o-table {
-  width: 100%; }
-
-/* Equal-width table cells.
-   ========================================================================== */
-/**
- * `table-layout: fixed` forces all cells within a table to occupy the same
- * width as each other. This also has performance benefits: because the browser
- * does not need to (re)calculate cell dimensions based on content it discovers,
- * the table can be rendered very quickly. Further reading:
- * https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout#Values
- */
-.o-table--fixed {
-  table-layout: fixed; }
-
-/* Size variants.
-   ========================================================================== */
-.o-table--tiny th,
-.o-table--tiny td {
-  padding: 6px; }
-
-.o-table--small th,
-.o-table--small td {
-  padding: 12px; }
-
-.o-table--large th,
-.o-table--large td {
-  padding: 48px; }
-
-.o-table--huge th,
-.o-table--huge td {
-  padding: 96px; }
-
-/* ==========================================================================
-   #PACK
-   ========================================================================== */
-/**
- * The pack object simply causes any number of elements pack up horizontally to
- * automatically fill an equal, fluid width of their parent.
- *
- * 1. Fill all available space.
- * 2. Remove any leftover styling from lists.
- * 3. Cause children to be automatically equally sized.
- */
-.o-pack {
-  width: 100%;
-  /* [1] */
-  margin-left: 0;
-  /* [2] */
-  display: table;
-  table-layout: fixed;
-  /* [3] */ }
-
-/**
-   * 1. Cause children to adopt table-like structure.
-   * 2. Default item alignment is with the tops of each other.
-   */
-.o-pack__item {
-  display: table-cell;
-  /* [1] */
-  vertical-align: top;
-  /* [2] */
-  /* Vertical alignment variants.
-       ====================================================================== */ }
-  .o-pack--middle > .o-pack__item {
-    vertical-align: middle; }
-  .o-pack--bottom > .o-pack__item {
-    vertical-align: bottom; }
-
-/* Unequal-width items.
-   ========================================================================== */
-.o-pack--auto {
-  table-layout: auto; }
-
-/* Size variants.
-   ========================================================================== */
-.o-pack--tiny {
-  border-spacing: 6px; }
-
-.o-pack--small {
-  border-spacing: 12px; }
-
-.o-pack--large {
-  border-spacing: 48px; }
-
-.o-pack--huge {
-  border-spacing: 96px; }
-
-/* Reversed order packs
-   ========================================================================== */
-.o-pack--reverse {
-  direction: rtl; }
-  .o-pack--reverse > .o-pack__item {
-    direction: ltr; }
-
 .o-island {
   padding: 24px; }
   .o-island-tiny {
@@ -1324,6 +869,46 @@ table {
     padding: 48px 0; }
   .o-peninsula-huge {
     padding: 96px 0; }
+
+.c-navigation {
+  margin-left: 0;
+  list-style: none; }
+  @media (min-width: 46.25em) {
+    .c-navigation {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      text-align: right; } }
+  .c-navigation__item {
+    display: block;
+    text-align: center; }
+    @media (min-width: 46.25em) {
+      .c-navigation__item {
+        display: inline-block; } }
+  .c-navigation__link {
+    display: block;
+    color: #FDFDF1;
+    background-color: #ED6A5A;
+    padding: 12px 12px; }
+    .c-navigation__link:hover {
+      background-color: #e8402c; }
+    @media (min-width: 46.25em) {
+      .c-navigation__link {
+        display: inline-block;
+        color: #333;
+        background-color: transparent; }
+        .c-navigation__link:hover {
+          color: #FDFDF1;
+          background-color: #ED6A5A; } }
+
+.c-delimiter {
+  margin: 48px 0;
+  height: 48px;
+  background-image: url(eaa6618e9ce1498f54670ebf6c7cc92b.svg);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 /* ==========================================================================
    #CLEARFIX
@@ -2940,65 +2525,6 @@ table {
 
 /* stylelint-enable string-quotes */
 /* ==========================================================================
-   #PRINT
-   ========================================================================== */
-/**
- * Very crude, reset-like styles taken from the HTML5 Boilerplate:
- * https://github.com/h5bp/html5-boilerplate/blob/5.3.0/dist/doc/css.md#print-styles
- * https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L205-L282
- */
-@media print {
-  /**
-   * 1. Black prints faster: http://www.sanbeiji.com/archives/953
-   */
-  *,
-  *:before,
-  *:after,
-  *:first-letter,
-  *:first-line {
-    background: transparent !important;
-    color: #000 !important;
-    /* [1] */
-    box-shadow: none !important;
-    text-shadow: none !important; }
-  a,
-  a:visited {
-    text-decoration: underline; }
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-  /**
-   * Don't show links that are fragment identifiers, or use the `javascript:`
-   * pseudo protocol.
-   */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: ""; }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-  /**
-   * Printing Tables: http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group; }
-  tr,
-  img {
-    page-break-inside: avoid; }
-  img {
-    max-width: 100% !important; }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-  h2,
-  h3 {
-    page-break-after: avoid; } }
-
-/* ==========================================================================
    #HIDE
    ========================================================================== */
 /**
@@ -3027,7 +2553,16 @@ table {
 .u-100vh {
   height: 100vh; }
 
-.u-align-vertical-center {
+.u-align-center {
+  text-align: center !important; }
+
+.u-align-left {
+  text-align: left !important; }
+
+.u-align-right {
+  text-align: right !important; }
+
+.u-valign-center {
   position: absolute;
   top: 50%;
   transform: translateY(-50%); }
