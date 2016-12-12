@@ -9,7 +9,12 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    {% if jekyll.environment == "production" %}
+      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    {% else %}
+      <link rel="stylesheet" type="text/css" href="http://localhost:8080/style.css" />
+    {% endif %}
+
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
 
@@ -40,5 +45,11 @@
     </div>
 
     {% include analytics.html %}
+
+    {% if jekyll.environment == "production" %}
+      <script src="{{ site.baseurl }}/main.js"></script>
+    {% else %}
+      <script src="http://localhost:8080/main.js"></script>
+    {% endif %}
   </body>
 </html>

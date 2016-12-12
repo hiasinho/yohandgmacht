@@ -14,19 +14,21 @@ const sassLoaders = [
 
 const config = {
   entry: [
+    './webpack/javascripts/main',
     './webpack/stylesheets/entry'
   ],
 
   output: {
     path: __dirname,
-    filename: '_js/[name].js',
+    filename: '[name].js',
   },
 
   resolve: {
     extensions: ['', '.js', '.jsx', '.scss'],
   },
   plugins: [
-    new ExtractTextPlugin('_sass/bundle.scss', { allChunks: true })
+    // new ExtractTextPlugin('_sass/bundle.scss', { allChunks: true }),
+    new ExtractTextPlugin('style.css', { allChunks: true })
   ],
   module: {
     loaders: [
@@ -41,7 +43,7 @@ const config = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'file-loader'
+        loader: 'file-loader?name=images/[hash].[ext]',
       }
     ],
   },
