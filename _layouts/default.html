@@ -15,14 +15,13 @@
       <link rel="stylesheet" type="text/css" href="http://localhost:8080/style.css" />
     {% endif %}
 
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
 
   <body>
     <div class="o-wrapper u-align-center u-margin-top-large u-margin-bottom-large">
       <img src="{{ site.avatar }}" class="u-margin-bottom" />
 
-      <h1 class="site-name">{{ site.title }}</h1>
+      <h1 class="site-name u-text-huge">{{ site.title }}</h1>
     </div>
 
     <ul class="c-navigation">
@@ -43,6 +42,27 @@
     <div class="o-wrapper">
       {{ content }}
     </div>
+
+    <footer id="pageend">
+      <div class="o-layout o-layout--center">
+        <div class="o-layout__item u-align-center u-padding-top-large">
+          <div class="o-island">
+            <img src="images/yo_klein.svg" width="100px" class="u-margin-bottom" />
+
+      			<div>
+      			  &copy yo! Yvonne Oberhauser
+      			  |
+      			  <a href="{{ site.baseurl }}/">Start</a>
+      			  |
+      			  <a href="{{ site.baseurl }}/impressum">Impressum</a>
+      			  |
+      			  <a href="{{ site.baseurl }}/datenschutz">Datenschutz</a>
+      			</div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
 
     {% include analytics.html %}
 

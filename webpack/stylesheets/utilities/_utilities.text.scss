@@ -20,3 +20,7 @@
     text-align: right !important;
   }
 }
+
+.u-text-huge {
+  @include font-size(74px);
+}
