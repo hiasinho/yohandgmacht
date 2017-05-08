@@ -56,6 +56,7 @@
 // @import "~inuitcss/objects/objects.table";
 // @import "~inuitcss/objects/objects.pack";
 @import "objects/objects.island";
+@import "objects/objects.thumb";
 
 
 
@@ -69,12 +70,13 @@
 
 
 
-
+@import "~lity/dist/lity.css";
 
 // UTILITIES
 @import "~inuitcss/utilities/utilities.clearfix";
 
 $inuit-offsets: true;
+$inuit-fractions: 1 2 3 4 5 12 !default;
 @import "~inuitcss/utilities/utilities.widths";
 @import "~inuitcss/utilities/utilities.headings";
 @import "~inuitcss/utilities/utilities.spacing";
