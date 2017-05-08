@@ -21,6 +21,18 @@
   }
 }
 
+.u-text-large\@tablet {
+  @include mq(tablet) {
+    @include font-size(58px);
+  }
+}
+
 .u-text-huge {
   @include font-size(74px);
+}
+
+.u-text-huge\@desktop {
+  @include mq(desktop) {
+    @include font-size(74px);
+  }
 }
