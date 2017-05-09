@@ -8,48 +8,18 @@ layout: default
   <div class="o-layout">
     <div class="o-layout__item u-3/5@tablet u-push-2/5@tablet">
       <div class="o-island">
-        <h1>Maßarbeit</h1>
+        <h1>{{site.data.content.massarbeit.title}}</h1>
 
-        <p>
-          Wenn es von der Stange einfach nicht richtig passt oder es nichts nach Ihren Vorstellungen gibt,
-          ist Maßarbeit gefragt. Unabhängig davon ob Sie bereits eine konkrete Vorstellung, ein Foto oder
-          ein altes Lieblingsstück als Vorlage mitbringen werde ich mit Ihnen Schritt für Schritt ihr
-          Kleidungsstück entwickeln. Gefertigt wird abgestimmt auf Sie und Ihre individuellen Wünsche ein
-          passgenau verarbeitetes Unikat in Handarbeit - also keine Maßkonfektion sondern echte
-          Maßarbeit - in Bayern. Bitte melden Sie sich frühzeitig, denn der gesamte Prozess aus Vermessen,
-          Beratung, Schnitterstellung, Materialauswahl, Fertigung und Anprobe nimmt einige Zeit in Anspruch.
-        </p>
+        {{site.data.content.massarbeit.body}}
 
         <div class="o-layout o-layout--small">
-          <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
-            <a href="images/massarbeit/massarbeit_01.jpg" data-lity data-lity-target="images/massarbeit/massarbeit_01.jpg" class="o-thumb">
-              <img src="images/massarbeit/massarbeit_01_thumb.jpg">
-            </a>
-          </div>
-
-          <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
-            <a href="images/massarbeit/massarbeit_02.jpg" data-lity data-lity-target="images/massarbeit/massarbeit_02.jpg" class="o-thumb">
-              <img src="images/massarbeit/massarbeit_02_thumb.jpg">
-            </a>
-          </div>
-
-          <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
-            <a href="images/massarbeit/massarbeit_03.jpg" data-lity data-lity-target="images/massarbeit/massarbeit_03.jpg" class="o-thumb">
-              <img src="images/massarbeit/massarbeit_03_thumb.jpg">
-            </a>
-          </div>
-
-          <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
-            <a href="images/massarbeit/massarbeit_04.jpg" data-lity data-lity-target="images/massarbeit/massarbeit_04.jpg" class="o-thumb">
-              <img src="images/massarbeit/massarbeit_04_thumb.jpg">
-            </a>
-          </div>
-
-          <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
-            <a href="images/massarbeit/massarbeit_05.jpg" data-lity data-lity-target="images/massarbeit/massarbeit_05.jpg" class="o-thumb">
-              <img src="images/massarbeit/massarbeit_05_thumb.jpg">
-            </a>
-          </div>
+          {% for image in site.data.content.massarbeit.images %}
+            <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
+              <a href="{{ site.baseurl }}/images/massarbeit/{{ image }}.jpg" data-lity data-lity-target="{{ site.baseurl }}/images/massarbeit/{{ image }}.jpg" class="o-thumb">
+                <img src="{{ site.baseurl }}/images/massarbeit/{{ image }}_thumb.jpg">
+              </a>
+            </div>
+          {% endfor %}
         </div>
 
       </div>
@@ -69,15 +39,9 @@ layout: default
   <div class="o-layout">
     <div class="o-layout__item u-3/5@tablet">
       <div class="o-island">
-        <h1>Änderungen</h1>
+        <h1>{{ site.data.content.aenderungen.title }}</h1>
 
-        <p>
-          Von der klassischen Änderung (zu kurz/lang/eng/weit) über alle Arten von Reparaturen
-          (flicken, Reißverschluss ersetzen, neues Futter, etc.) bis hin zu Upcycling (aus dem
-          tollen Stoff von Omas altem Kleid eine neue Dirndlschürze o.ä. - der Fantasie sind hier
-          keine Grenzen gesetzt) werden alle Arbeiten fachgerecht und kompetent ausgeführt.
-          Mein Ziel ist, dass Sie lange Freude an Ihren Sachen haben.
-        </p>
+        {{ site.data.content.aenderungen.body }}
       </div>
     </div>
 
@@ -95,51 +59,18 @@ layout: default
   <div class="o-layout">
     <div class="o-layout__item u-3/5@tablet u-push-2/5@tablet">
       <div class="o-island">
-        <h1>Kindersachen</h1>
+        <h1>{{ site.data.content.kinder.title }}</h1>
 
-        <p>
-          Kindersachen machen viele - ich biete Ihnen ausschließlich qualitativ hochwertige und
-          praxiserprobte Kinderprodukte. Sie suchen nach etwas besonderem für Ihren kleinen Schatz
-          oder nach einem ausgefallenem Geschenk, dass es garantiert nicht an jeder Ecke gibt?
-          Gerne fertige ich auch nach Ihren individuellen Wünschen oder personalisiere z.B. ein
-          Knistertuch mit Namen.
-        </p>
-        <p>
-          Ob Accessoires (Wickeltasche, Schnullerkette, Babyschalenbezug, Krabbeldecke, Knistertuch)
-          oder Kleidung (Body, T-Shirt, Jogginghose, Walkanzug, Mütze, Krabbelschuhe) wie bei allem
-          von mir gilt: Handgemacht in Bayern
-        </p>
+        {{ site.data.content.kinder.body }}
 
         <div class="o-layout o-layout--small">
-          <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
-            <a href="images/kinder/kinder_01.jpg" data-lity data-lity-target="images/kinder/kinder_01.jpg" class="o-thumb">
-              <img src="images/kinder/kinder_01_thumb.jpg">
-            </a>
-          </div>
-
-          <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
-            <a href="images/kinder/kinder_02.jpg" data-lity data-lity-target="images/kinder/kinder_02.jpg" class="o-thumb">
-              <img src="images/kinder/kinder_02_thumb.jpg">
-            </a>
-          </div>
-
-          <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
-            <a href="images/kinder/kinder_03.jpg" data-lity data-lity-target="images/kinder/kinder_03.jpg" class="o-thumb">
-              <img src="images/kinder/kinder_03_thumb.jpg">
-            </a>
-          </div>
-
-          <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
-            <a href="images/kinder/kinder_04.jpg" data-lity data-lity-target="images/kinder/kinder_04.jpg" class="o-thumb">
-              <img src="images/kinder/kinder_04_thumb.jpg">
-            </a>
-          </div>
-
-          <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
-            <a href="images/kinder/kinder_05.jpg" data-lity data-lity-target="images/kinder/kinder_05.jpg" class="o-thumb">
-              <img src="images/kinder/kinder_05_thumb.jpg">
-            </a>
-          </div>
+          {% for image in site.data.content.kinder.images %}
+            <div class="o-layout__item u-6/12 u-1/5@desktop u-margin-bottom-small">
+              <a href="{{ site.baseurl }}/images/kinder/{{ image }}.jpg" data-lity data-lity-target="{{ site.baseurl }}/images/kinder/{{ image }}.jpg" class="o-thumb">
+                <img src="{{ site.baseurl }}/images/kinder/{{ image }}_thumb.jpg">
+              </a>
+            </div>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -158,14 +89,12 @@ layout: default
   <div class="o-layout o-layout--center">
     <div class="o-layout__item u-2/5@tablet">
       <div class="o-island">
-        <h1>Yvonne Oberhauser</h1>
+        <h1>{{ site.data.content.uebermich.title }}</h1>
 
         <ul class="o-list-bare">
-          <li class="o-list-bare__item">Deutsche Meisterschule für Mode</li>
-          <li class="o-list-bare__item">Städtische Fachschule für Schnitt und Entwurf</li>
-          <li class="o-list-bare__item">Rosner</li>
-          <li class="o-list-bare__item">Strenesse</li>
-          <li class="o-list-bare__item">Rena Lange</li>
+          {% for item in site.data.content.uebermich.list %}
+            <li class="o-list-bare__item">{{ item }}</li>
+          {% endfor %}
         </ul>
       </div>
     </div>

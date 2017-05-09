@@ -1,0 +1,60 @@
+massarbeit:
+  title: Maßarbeit
+  body: |
+    <p>
+      Wenn es von der Stange einfach nicht richtig passt oder es nichts nach Ihren Vorstellungen gibt,
+      ist Maßarbeit gefragt. Unabhängig davon ob Sie bereits eine konkrete Vorstellung, ein Foto oder
+      ein altes Lieblingsstück als Vorlage mitbringen werde ich mit Ihnen Schritt für Schritt ihr
+      Kleidungsstück entwickeln. Gefertigt wird abgestimmt auf Sie und Ihre individuellen Wünsche ein
+      passgenau verarbeitetes Unikat in Handarbeit - also keine Maßkonfektion sondern echte
+      Maßarbeit - in Bayern. Bitte melden Sie sich frühzeitig, denn der gesamte Prozess aus Vermessen,
+      Beratung, Schnitterstellung, Materialauswahl, Fertigung und Anprobe nimmt einige Zeit in Anspruch.
+    </p>
+  images:
+    - massarbeit_01
+    - massarbeit_02
+    - massarbeit_03
+    - massarbeit_04
+    - massarbeit_05
+
+aenderungen:
+  title: Änderungen
+  body: |
+    <p>
+      Von der klassischen Änderung (zu kurz/lang/eng/weit) über alle Arten von Reparaturen
+      (flicken, Reißverschluss ersetzen, neues Futter, etc.) bis hin zu Upcycling (aus dem
+      tollen Stoff von Omas altem Kleid eine neue Dirndlschürze o.ä. - der Fantasie sind hier
+      keine Grenzen gesetzt) werden alle Arbeiten fachgerecht und kompetent ausgeführt.
+      Mein Ziel ist, dass Sie lange Freude an Ihren Sachen haben.
+    </p>
+
+kinder:
+  title: Kindersachen
+  body: |
+    <p>
+      Kindersachen machen viele - ich biete Ihnen ausschließlich qualitativ hochwertige und
+      praxiserprobte Kinderprodukte. Sie suchen nach etwas besonderem für Ihren kleinen Schatz
+      oder nach einem ausgefallenem Geschenk, dass es garantiert nicht an jeder Ecke gibt?
+      Gerne fertige ich auch nach Ihren individuellen Wünschen oder personalisiere z.B. ein
+      Knistertuch mit Namen.
+    </p>
+    <p>
+      Ob Accessoires (Wickeltasche, Schnullerkette, Babyschalenbezug, Krabbeldecke, Knistertuch)
+      oder Kleidung (Body, T-Shirt, Jogginghose, Walkanzug, Mütze, Krabbelschuhe) wie bei allem
+      von mir gilt: Handgemacht in Bayern
+    </p>
+  images:
+    - kinder_01
+    - kinder_02
+    - kinder_03
+    - kinder_04
+    - kinder_05
+
+uebermich:
+  title: Yvonne Oberhauser
+  list:
+    - Deutsche Meisterschule für Mode
+    - Städtische Fachschule für Schnitt und Entwurf
+    - Rosner
+    - Strenesse
+    - Rena Lange
