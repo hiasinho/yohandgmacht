@@ -37,3 +37,22 @@ $('a[href*="#"]')
       }
     }
   })
+
+
+$.fn.isInViewport = function() {
+  const elementTop = $(this).offset().top
+  const elementBottom = elementTop + $(this).outerHeight()
+
+  const viewportTop = $(window).scrollTop()
+  const viewportBottom = viewportTop + $(window).height()
+
+  return elementBottom > viewportTop && elementTop < viewportBottom
+}
+
+$(window).on('resize scroll', function() {
+  if ($('#top').isInViewport()) {
+    $('.js-up-nav').fadeOut()
+  } else {
+    $('.js-up-nav').fadeIn()
+  }
+});
