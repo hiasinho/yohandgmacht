@@ -1,0 +1,8 @@
+.c-section {
+  transition: background-color 300ms ease;
+
+  &:focus {
+    // background-color: darken($color-base-background, 3%);
+    outline: none;
+  }
+}
